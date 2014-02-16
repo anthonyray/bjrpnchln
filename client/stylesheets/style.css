@@ -1,0 +1,32 @@
+.nav
+{
+	list-style-type: none;
+}
+
+.nav li
+{
+	display: inline;
+	margin: 10px;
+}
+
+.punchline
+{
+	text-align: center;
+}
+
+.date
+{
+	text-align: center;
+}
+
+.disabled
+{
+	background : black;
+}
+
+img
+{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}

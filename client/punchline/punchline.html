@@ -1,0 +1,22 @@
+<template name="punchline">
+<p class="date">{{date}}</p>
+	<p class="punchline">{{punchline}}</p>
+	<hr>
+	<img src="/images/{{artist._id}}.png"></img>
+	<p class="infos">
+		<ul>
+			<li>{{ artist.name }} - {{ band.name}}</li>
+			<li>{{ song.title}}</li>
+			<li>{{ album.title}}</li>
+			<li>{{ youTubeLink}}</li>
+		</ul>
+	</p>
+	<p>
+		<ul>
+			<li>Upvote : {{upvote}} <button class="upvote {{upvoteClass}}">+1</button></li>
+			<li>Downvote : {{downvote}} <button class="downvote {{downvoteClass}}">+1</button></li>
+			<li>Twitter : {{tweets}}</li>
+			<li>Facebook : {{fbLikes}}</li>
+		</ul>
+	</p>
+</template>
