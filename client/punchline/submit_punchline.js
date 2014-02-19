@@ -1,12 +1,30 @@
 Template.submitPunchline.helpers({
-	artists : function(){
-		return Artists.find();
-	}
+
 });
 
 Template.submitPunchline.events({
-	'change .selectArtist':function(event)
+
+	'keypress .searchArtist':function(event)
 	{
-		alert('wargfnin');
+		Session.set('searchArtist',event.target.value);
+	},
+	'click .selectBand' : function(event)
+	{
+		Session.set('selectedBandId',event.target.value);
+	}, 
+
+	'click .selectSong':function(event)
+	{
+		Session.set('selectedSongId',event.target.value);
+	},
+
+	'click .selectAlbum':function(event)
+	{
+		Session.set('selectedAlbumId',event.target.value);
+	}, 
+	'submit form': function(event)
+	{
+		event.preventDefault();
+		Session.set('searchArtist',event.target.value);
 	}
 });

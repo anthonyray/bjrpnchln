@@ -5,6 +5,7 @@ if (Punchlines.find().count() === 0)
 	var alphId = Artists.insert({name : "Alpha Wann"});
 
 	var ninetyfiveId = Bands.insert({name : "1995", members : [nekId,alphId] });
+	var sCrewId = Bands.insert({name : "S-Crew", members : [nekId] });
 
 	var albumId = Albums.insert({title : "Paris Sud Minute", id_band : ninetyfiveId});
 	

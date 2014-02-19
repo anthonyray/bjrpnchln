@@ -3,33 +3,22 @@
 	<h1> What's the punchline ? </h1>
 	<label for="punchline">Punchline</label>
 	<textarea></textarea>
-	<h1>Select an artist</h1>
+	<h1>Quel Artiste ?</h1>
 	<label for="artist">Artist</label>
-		<input class="searchArtist"></input><br>
-		<select name="artist" class="selectArtist">
-			{{#each artists}}
-				<option value="{{_id}}">{{name}}</option>
-			{{/each}}
-		</select>
+		<input class="searchArtist"></input>
+		<br>
+
+		<ul>
+			{{> searchArtist}}
+		</ul>	
 		<br>
 	<h1>En groupe ou en solo ?</h1>
-	<label for="artist">Album</label>
-		<select name="artist">
-			<option value="caac">Caca</option>
-			<option value="pipi">Pipi</option>
-		</select>
+		{{> formBand}}
 	<br>
+	<h1>Quel Album ?</h1>
+		{{> formAlbum}}
 	<h1>Dans quelle chanson ?</h1>
-	<label for="artist">Song</label>
-		<select name="artist">
-			<option value="caac">Caca</option>
-			<option value="pipi">Pipi</option>
-		</select>
-	<br>
-	<label for="artist">Artist</label>
-		<select name="artist">
-			<option value="caac">Caca</option>
-			<option value="pipi">Pipi</option>
-		</select>		
+	<label for="song">Song</label>
+		{{> formSong}}	
 	</form>
 </template>

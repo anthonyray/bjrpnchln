@@ -1,0 +1,8 @@
+<template name="formBand">
+		<label for="artist">Band</label>
+		<select class="selectBand">
+		{{#each bands}}
+			<option value="{{_id}}">{{name}}</option>
+		{{/each}}
+		</select>
+</template>
