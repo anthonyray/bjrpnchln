@@ -25,6 +25,18 @@ Template.submitPunchline.events({
 	'submit form': function(event)
 	{
 		event.preventDefault();
-		Session.set('searchArtist',event.target.value);
+		var punchline = {
+			punchline : $(event.target).find('[name=punchline]').val(), 
+			id_artist : Session.get('selectedArtistId'),
+			id_band : Session.get('selectedBandId'),
+			id_song : Session.get('selectedSongId'), 
+			id_album : Session.get('selectedAlbumId'),
+		}
+		Meteor.call('submit',punchline,function(error,id){
+			if (error)
+				return alert(error.reason);
+
+			Meteor.Router.to('/');
+		});
 	}
 });

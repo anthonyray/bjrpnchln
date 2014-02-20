@@ -1,0 +1,24 @@
+<template name="administration">
+	<h1>Nouvelles Punchlines <span class="badge"> {{newPunchlinesNumber}}</span></h1>
+	<table>
+		{{#each newPunchlines}}
+			<tr>
+				<td>{{punchline}}</td>
+				<td>{{id_artist}}</td>
+				<td>{{id_album}}</td>
+			</tr>
+		{{/each}}
+
+	</table>
+	<h1>Nouveaux Artistes <span class="badge">10</span></h1>
+	<h1>Nouvelles Chansons <span class="badge">10</span></h1>
+	<h1>Nouveaux Albums <span class="badge">10</span></h1>
+	<h1>Statistiques <span class="badge">10</span> </h1>
+		<ul>
+			<li>Visites</li>
+			<li>Nombre upvotes</li>
+			<li>Nombre downvotes</li>
+			<li>Nombre de partages Twitter </li>
+			<li>Nombre de partages Facebook</li>
+		</ul>
+</template>

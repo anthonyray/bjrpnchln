@@ -1,8 +1,8 @@
 <template name="searchArtist">
 
-	<ul>
+	<ul class="img-list">
 		{{#each artists}}
-			<li artistId="{{_id}}">{{name}}</li>
+			<li artistId="{{_id}}"><div class="artist"><p>{{name}}</p><img src="images/{{_id}}.png"></img></div></li>
 		{{/each}}
 	</ul>
 </template>

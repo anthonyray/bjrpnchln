@@ -2,23 +2,18 @@
 	<form>
 	<h1> What's the punchline ? </h1>
 	<label for="punchline">Punchline</label>
-	<textarea></textarea>
+	<textarea name="punchline"></textarea>
 	<h1>Quel Artiste ?</h1>
 	<label for="artist">Artist</label>
 		<input class="searchArtist"></input>
-		<br>
-
-		<ul>
 			{{> searchArtist}}
-		</ul>	
-		<br>
 	<h1>En groupe ou en solo ?</h1>
 		{{> formBand}}
-	<br>
 	<h1>Quel Album ?</h1>
 		{{> formAlbum}}
 	<h1>Dans quelle chanson ?</h1>
-	<label for="song">Song</label>
-		{{> formSong}}	
+		{{> formSong}}
+	<br>
+	<input type="submit" value="Submit">	
 	</form>
 </template>

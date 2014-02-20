@@ -6,7 +6,8 @@ Template.searchArtist.helpers({
 
 Template.searchArtist.events({
 	
-	'click li':function(event){
+	'click .artist':function(event){
 		Session.set('selectedArtistId',event.target.attributes['artistId'].value);
+		alert('oui');
 	}
 });
